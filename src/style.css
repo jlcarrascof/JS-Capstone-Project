@@ -1,11 +1,17 @@
 :root {
   --color-secondary: #101d2c;
+
   --color-grey-light-1: #f9f7f6;
   --color-grey-light-2: #aaa;
+
   --color-grey-dark-1: #54483a;
   --color-grey-dark-2: #6d5d4b;
+
+  /* FONT VARIABLES */
   --font-primary: "Nunito", sans-serif;
   --font-display: "Josefin Sans", sans-serif;
+
+  /*RESPONSIVE BREAKPOINTS*/
   --bp-largest: 75em;
   --bp-large: 62.5em;
   --bp-medium: 50em;
@@ -41,6 +47,44 @@ body {
   margin: 0 auto;
 }
 
+.header {
+  height: 8rem;
+}
+
+.navigation {
+  display: flex;
+  font-size: 1.6rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem;
+}
+
+.logo {
+  width: 40%;
+}
+
+.logo a {
+  text-decoration: none;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+}
+
+.nav-item {
+  margin-left: 4rem;
+}
+
+.nav-item a {
+  text-decoration: none;
+}
+
 h1 {
   margin-top: 3rem;
 }
@@ -54,7 +98,7 @@ h1 {
 
 .show-card {
   border: 1px solid #ccc;
-  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   overflow: hidden;
   display: flex;
@@ -73,6 +117,7 @@ h1 {
   padding: 1rem;
 }
 
+/*///////////////////style comment//////////////////////////*/
 .btn {
   background-color: transparent;
   margin: 1rem;
@@ -103,6 +148,7 @@ h1 {
   flex-direction: column;
   padding: 4rem;
   overflow: scroll;
+  display: none;
 }
 
 .container-comment {
@@ -118,7 +164,7 @@ h1 {
 
 .image-container {
   width: 50%;
-  height: 40%;
+  height: 50%;
 }
 
 .comment-image {
@@ -128,11 +174,19 @@ h1 {
   display: block;
 }
 
-.shows-detail {
+.shows-name {
   display: flex;
   flex-direction: column;
   color: var(--color-secondary);
-  padding: 3rem 8rem;
+  padding: 0 8rem;
+}
+
+.show-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 60rem;
+  gap: 4rem;
 }
 
 .detail span {

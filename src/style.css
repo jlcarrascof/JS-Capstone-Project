@@ -1,9 +1,7 @@
 :root {
   --color-secondary: #101d2c;
-
   --color-grey-light-1: #f9f7f6;
   --color-grey-light-2: #aaa;
-
   --color-grey-dark-1: #54483a;
   --color-grey-dark-2: #6d5d4b;
 
@@ -11,7 +9,7 @@
   --font-primary: "Nunito", sans-serif;
   --font-display: "Josefin Sans", sans-serif;
 
-  /*RESPONSIVE BREAKPOINTS*/
+  /* RESPONSIVE BREAKPOINTS */
   --bp-largest: 75em;
   --bp-large: 62.5em;
   --bp-medium: 50em;
@@ -98,7 +96,7 @@ h1 {
 
 .show-card {
   border: 1px solid #ccc;
-  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
   overflow: hidden;
   display: flex;
@@ -117,7 +115,7 @@ h1 {
   padding: 1rem;
 }
 
-/*///////////////////style comment//////////////////////////*/
+/* ///////////////////style comment////////////////////////// */
 .btn {
   background-color: transparent;
   margin: 1rem;
@@ -143,7 +141,6 @@ h1 {
   position: fixed;
   left: 0;
   top: 0;
-  display: flex;
   align-items: center;
   flex-direction: column;
   padding: 4rem;

@@ -1,1 +1,1 @@
-# JavascriptCapstoneBoard
+# JavascriptCapstoneProject

@@ -228,7 +228,6 @@ h1 {
 .footer {
   padding: 8rem 4rem;
   font-size: 1.8rem;
-  color: var(--color-secondary);
   text-transform: capitalize;
   background-color: var(--color-grey-dark-2);
   color: var(--color-grey-light-1);

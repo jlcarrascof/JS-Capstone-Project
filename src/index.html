@@ -22,44 +22,50 @@
         </nav>
       </div>
     </header>
-    <div class="container">
-      <h1>TV Shows List</h1>
-      <div id="shows-list" class="shows-list"></div>
-      <div id="shows-comment" class="shows-comment">
-        <div class="container-comment">
-          <div class="show-detail"></div>
+    <main>
+      <div class="container">
+        <h1>TV Shows List</h1>
+        <div id="shows-list" class="shows-list"></div>
+        <div id="shows-comment" class="shows-comment">
+          <div class="container-comment">
+            <div class="show-detail"></div>
 
-          <div id="list-comment" class="list-comment">
-            <h3>comment</h3>
-            <ul>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Lorem, ipsum.</li>
-            </ul>
+            <div id="box-comment" class="box-comment">
+              <h3 class="numberCommet">comment</h3>
+              <ul class="listComment"></ul>
+            </div>
+
+            <form class="form">
+              <h3>Add a comment</h3>
+              <input
+                type="text"
+                class="nameInput"
+                required
+                placeholder="Add your Name"
+              />
+              <textarea
+                class="commentInput"
+                cols="30"
+                rows="10"
+                placeholder="Your insights"
+                required
+              ></textarea>
+
+              <button class="btn submit">Comment</button>
+            </form>
+
+            <button class="btn close-btn">✕</button>
           </div>
-
-          <form class="form">
-            <h3>Add a comment</h3>
-            <input
-              type="text"
-              class="name-comment"
-              required
-              placeholder="Add your Name"
-            />
-            <textarea
-              class="insights-comment"
-              cols="30"
-              rows="10"
-              placeholder="Your insights"
-              required
-            ></textarea>
-
-            <button class="btn submit">Comment</button>
-          </form>
-
-          <button class="btn close-btn">✕</button>
         </div>
       </div>
-    </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          created by EL mehdi Ahmidou & Javier Jesus Martínez Fariñas under CC
+          license
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

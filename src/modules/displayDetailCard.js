@@ -1,6 +1,7 @@
 const showDetail = document.querySelector('.show-detail');
 
 const displayDetailCard = (data) => {
+  document.getElementById('shows-comment').style.display = 'flex';
   const htmlDetail = `<div class="image-container">
                           <img class="comment-image" src="${data.image.medium}" />
                       </div>

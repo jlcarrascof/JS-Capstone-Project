@@ -1,11 +1,6 @@
 import displayDetailCard from './displayDetailCard.js';
+import countComments from './countComments.js';
 import { createComment, getItemComments } from './commentsApi.js';
-
-const countComments = () => {
-  const commentElements = document.querySelectorAll('.itemComment');
-  const commentCount = commentElements.length;
-  return commentCount;
-};
 
 const displayComments = async (commentId) => {
   const listCommet = document.querySelector('.listComment');

@@ -1,6 +1,12 @@
 import displayDetailCard from './displayDetailCard.js';
 import { createComment, getItemComments } from './commentsApi.js';
 
+const countComments = () => {
+  const commentElements = document.querySelectorAll('.itemComment');
+  const commentCount = commentElements.length;
+  return commentCount;
+};
+
 const displayComments = async (commentId) => {
   const listCommet = document.querySelector('.listComment');
   const comments = await getItemComments(commentId);
@@ -8,6 +14,7 @@ const displayComments = async (commentId) => {
 
   comments.forEach((comment) => {
     const li = document.createElement('li');
+    li.classList.add('itemComment');
     li.innerHTML = `Date: ${comment.creation_date} <strong>${comment.username}</strong>  : ${comment.comment} `;
     listCommet.appendChild(li);
   });
@@ -23,18 +30,22 @@ const initializeEventHandlers = (showsData) => {
 
   let commentId;
 
-  btnComment.forEach((btn) => btn.addEventListener('click', () => {
+  btnComment.forEach((btn) => btn.addEventListener('click', async () => {
     commentId = +btn.parentElement.dataset.id;
     const showDetail = showsData.filter((el) => el.id === commentId);
 
     // display Detail Card
     displayDetailCard(...showDetail);
 
-    // Add comments counter
-    numberCommet.innerHTML = 'comment (5)';
-
     // display comment
     displayComments(commentId);
+
+    // Wait a bit to allow comments to be displayed
+    setTimeout(async () => {
+    // Add comments counter
+      const commentCounter = await countComments();
+      numberCommet.innerHTML = `comments (${commentCounter})`;
+    }, 500);
   }));
 
   addComment.addEventListener('submit', async (e) => {
@@ -45,6 +56,13 @@ const initializeEventHandlers = (showsData) => {
 
     // display comment
     displayComments(commentId);
+
+    // Wait a bit to allow comments to be displayed
+    setTimeout(async () => {
+    // Add comments counter
+      const commentCounter = await countComments();
+      numberCommet.innerHTML = `comments (${commentCounter})`;
+    }, 500);
 
     nameInput.value = '';
     commentInput.value = '';

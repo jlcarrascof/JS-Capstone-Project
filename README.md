@@ -1,25 +1,11 @@
 # JavaScript capstone project - Your API-based webapp
-
 # ![Microverse bagde](https://img.shields.io/badge/Microverse-blueviolet)
 
-
 > 
-    Use JavaScript to make websites dynamic and build basic single page apps.
-    Use ES6 syntax.
-    Use ES6 modules.
-    Use callbacks and promises.
-    Use webpack.
-    Apply JavaScript best practices and language style guides in code.
-    Use AAA pattern for unit tests.
-    Write units tests for a JavaScript app.
-    Follow Gitflow.
-    Solve simple git conflicts.
-    Send and receive data from an API.
-    Use API documentation.
-    Understand and use JSON.
-    Make JavaScript code asynchronous.
-    Perform a code review for a team member.
+The JavaScript capstone project is about building your own web application based on an external API. You will select an API that provides data about a topic that you like and then build the webapp around it. The webapp will have 2 or 3 user interfaces:
 
+    A home page showing a list of items that you can "like."
+    A popup window with more data about an item that you can use to comment on it or reserve it for a period of time.
 
 
 # 📗 Table of Contents
@@ -136,7 +122,11 @@ Browser (Chrome recommended)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-Here will write some future features
+    Display number of likes for each items in the Homepage.
+    Add tests for comments counter.
+    Create feature Add New Like.
+    Add all items counter on the homepage.
+    Add tests for items counter.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

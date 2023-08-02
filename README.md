@@ -1,13 +1,25 @@
-# Leaderboard Project
+# JavaScript capstone project - Your API-based webapp
 
 # ![Microverse bagde](https://img.shields.io/badge/Microverse-blueviolet)
 
 
-> You will be building the leaderboard website during the whole week. Here is the list of projects that will guide you through the steps described above. You will find details about each of the milestone requirements in the upcoming program activities.
+> 
+    Use JavaScript to make websites dynamic and build basic single page apps.
+    Use ES6 syntax.
+    Use ES6 modules.
+    Use callbacks and promises.
+    Use webpack.
+    Apply JavaScript best practices and language style guides in code.
+    Use AAA pattern for unit tests.
+    Write units tests for a JavaScript app.
+    Follow Gitflow.
+    Solve simple git conflicts.
+    Send and receive data from an API.
+    Use API documentation.
+    Understand and use JSON.
+    Make JavaScript code asynchronous.
+    Perform a code review for a team member.
 
-- Project 1: basic page structure.
-- Project 2: send and receive data from API.
-- Project 3: final touches.
 
 
 # 📗 Table of Contents
@@ -49,13 +61,15 @@
 
 ### Key Features <a name="key-features"></a>
 
-- ** Leaderboard Project 2023 **
+- 🚀 JavaScript capstone project 🚀
+
+In this video you can find more information about this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://jlcarrascof.github.io//)
+- [Live Demo Link] Here will go the demo link when all the project is finished.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,7 +89,7 @@ Clone this repository to your desired folder:
 
 ```
   cd my-folder
-  git clone git@github.com:jlcarrasco/Leaderboard.git 
+  git clone https://github.com/jlcarrascof/JS-Capstone-Project.git 
 ```
 
 ### Install
@@ -89,7 +103,7 @@ You don´t need to install this project
 To run the project, execute the following command:
 
 ```
-  code Leaderboard
+  code JS-Capstone-Project
 ```
 ### Run tests
 
@@ -107,16 +121,22 @@ Browser (Chrome recommended)
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 El Mehdi Ahmidou
+
+- GitHub: [@ahmidou09]
+- Twitter: [@el_ahmidou]
+
 👤 Javier J. Martínez F.
 
 - GitHub: [@jlcarrascof]
 - Twitter: [@javiersistemas]
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-No future features
+Here will write some future features
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

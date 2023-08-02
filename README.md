@@ -1,13 +1,11 @@
-# Leaderboard Project
-
+# JavaScript capstone project - Your API-based webapp
 # ![Microverse bagde](https://img.shields.io/badge/Microverse-blueviolet)
 
+> 
+The JavaScript capstone project is about building your own web application based on an external API. You will select an API that provides data about a topic that you like and then build the webapp around it. The webapp will have 2 or 3 user interfaces:
 
-> You will be building the leaderboard website during the whole week. Here is the list of projects that will guide you through the steps described above. You will find details about each of the milestone requirements in the upcoming program activities.
-
-- Project 1: basic page structure.
-- Project 2: send and receive data from API.
-- Project 3: final touches.
+    A home page showing a list of items that you can "like."
+    A popup window with more data about an item that you can use to comment on it or reserve it for a period of time.
 
 
 # 📗 Table of Contents
@@ -49,13 +47,15 @@
 
 ### Key Features <a name="key-features"></a>
 
-- ** Leaderboard Project 2023 **
+- 🚀 JavaScript capstone project 🚀
+
+In this video you can find more information about this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://jlcarrascof.github.io//)
+- [Live Demo Link] Here will go the demo link when all the project is finished.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -75,7 +75,7 @@ Clone this repository to your desired folder:
 
 ```
   cd my-folder
-  git clone git@github.com:jlcarrasco/Leaderboard.git 
+  git clone https://github.com/jlcarrascof/JS-Capstone-Project.git 
 ```
 
 ### Install
@@ -89,7 +89,7 @@ You don´t need to install this project
 To run the project, execute the following command:
 
 ```
-  code Leaderboard
+  code JS-Capstone-Project
 ```
 ### Run tests
 
@@ -107,16 +107,26 @@ Browser (Chrome recommended)
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 El Mehdi Ahmidou
+
+- GitHub: [@ahmidou09]
+- Twitter: [@el_ahmidou]
+
 👤 Javier J. Martínez F.
 
 - GitHub: [@jlcarrascof]
 - Twitter: [@javiersistemas]
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-No future features
+    Display number of likes for each items in the Homepage.
+    Add tests for comments counter.
+    Create feature Add New Like.
+    Add all items counter on the homepage.
+    Add tests for items counter.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

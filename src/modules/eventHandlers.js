@@ -1,19 +1,7 @@
-import displayDetailCard from './displayDetailCard.js';
-import countComments from './countComments.js';
-import { createComment, getItemComments } from './commentsApi.js';
-
-const displayComments = async (commentId) => {
-  const listCommet = document.querySelector('.listComment');
-  const comments = await getItemComments(commentId);
-  listCommet.innerHTML = '';
-
-  comments.forEach((comment) => {
-    const li = document.createElement('li');
-    li.classList.add('itemComment');
-    li.innerHTML = `Date: ${comment.creation_date} <strong>${comment.username}</strong>  : ${comment.comment} `;
-    listCommet.appendChild(li);
-  });
-};
+import {
+  displayDetailCard, displayComments, displayCounterOfComments, clearField,
+} from './displayDetailCard.js';
+import { createComment } from './commentsApi.js';
 
 const initializeEventHandlers = (showsData) => {
   const btnComment = document.querySelectorAll('.btn-comment');
@@ -21,10 +9,9 @@ const initializeEventHandlers = (showsData) => {
   const addComment = document.querySelector('.form');
   const nameInput = document.querySelector('.nameInput');
   const commentInput = document.querySelector('.commentInput');
-  const numberCommet = document.querySelector('.numberCommet');
-
   let commentId;
 
+  // display Detail Card
   btnComment.forEach((btn) => btn.addEventListener('click', async () => {
     commentId = +btn.parentElement.dataset.id;
     const showDetail = showsData.filter((el) => el.id === commentId);
@@ -35,14 +22,11 @@ const initializeEventHandlers = (showsData) => {
     // display comment
     displayComments(commentId);
 
-    // Wait a bit to allow comments to be displayed
-    setTimeout(async () => {
-    // Add comments counter
-      const commentCounter = await countComments();
-      numberCommet.innerHTML = `comments (${commentCounter})`;
-    }, 500);
+    // display Counter Of Comments
+    displayCounterOfComments();
   }));
 
+  // add new Comment
   addComment.addEventListener('submit', async (e) => {
     e.preventDefault();
 
@@ -52,17 +36,14 @@ const initializeEventHandlers = (showsData) => {
     // display comment
     displayComments(commentId);
 
-    // Wait a bit to allow comments to be displayed
-    setTimeout(async () => {
-    // Add comments counter
-      const commentCounter = await countComments();
-      numberCommet.innerHTML = `comments (${commentCounter})`;
-    }, 500);
+    // display Counter Of Comments
+    displayCounterOfComments();
 
-    nameInput.value = '';
-    commentInput.value = '';
+    // clear Field
+    clearField(nameInput, commentInput);
   });
 
+  // Close Detail Card
   closeBtn.addEventListener('click', () => {
     document.getElementById('shows-comment').style.display = 'none';
   });

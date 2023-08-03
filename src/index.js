@@ -16,17 +16,16 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Get all elements with 'likes-icon' class
     const likeIcons = document.querySelectorAll('.likes-icon');
 
-    // Add a click event 
+    // Add a click event
     likeIcons.forEach((likeIcon) => {
       let likesCount = 0; // Init Counter
 
       likeIcon.addEventListener('click', () => {
-        likesCount++; // Increments 
+        likesCount += 1; // Increments
         const likesCountElement = likeIcon.nextElementSibling; // Likes Number
         likesCountElement.textContent = likesCount; // Update likes number
       });
     });
-
   } catch (error) {
     throw new Error(`Error fetching data: ${error}`);
   }

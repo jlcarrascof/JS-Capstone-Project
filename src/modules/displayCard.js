@@ -8,7 +8,12 @@ const displayCard = (Data) => {
     showCard.innerHTML = `
                             <img class="show-image" src="${item.image.medium}">
                             <div class="show-title">${item.name}</div>
-                            
+
+                            <div class="likes-container">
+                              <span class="likes-icon">❤️</span>
+                              <span class="likes-count">0</span> Likes
+                            </div>
+                           
                             <button class="btn btn-comment">Add Comment</button>
                           `;
 

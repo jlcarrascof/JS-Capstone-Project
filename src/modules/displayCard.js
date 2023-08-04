@@ -28,6 +28,7 @@ const init = async (Data) => {
     `;
 
     showsList.appendChild(showCard);
+    document.querySelector('.counter-shows').textContent = `(${Data.length})`;
 
     initializeEventHandlers({ showCard, itemId: item.id, itemData: item });
   });

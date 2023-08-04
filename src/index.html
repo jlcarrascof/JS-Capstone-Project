@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
+      rel="stylesheet"
+    />
+    <title>TV Shows</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navigation">
+          <div class="logo"><a href="#">TV Shows</a></div>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#Home">Home</a></li>
+            <li class="nav-item"><a href="#about">about</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1>TV Shows List <span class="counter-shows"></span></h1>
+        <div id="shows-list" class="shows-list"></div>
+        <div id="shows-comment" class="shows-comment">
+          <div class="container-comment">
+            <div class="show-detail"></div>
+
+            <div id="box-comment" class="box-comment">
+              <h3 class="numberCommet">comment</h3>
+              <ul class="listComment"></ul>
+            </div>
+
+            <form class="form">
+              <h3>Add a comment</h3>
+              <input
+                type="text"
+                class="nameInput"
+                required
+                placeholder="Add your Name"
+              />
+              <textarea
+                class="commentInput"
+                cols="30"
+                rows="10"
+                placeholder="Your insights"
+                required
+              ></textarea>
+
+              <button class="btn submit">Comment</button>
+            </form>
+
+            <button class="btn close-btn">✕</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          created by EL mehdi Ahmidou & Javier Jesus Martínez Fariñas under CC
+          license
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

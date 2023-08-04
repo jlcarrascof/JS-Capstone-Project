@@ -10,70 +10,62 @@
     <title>TV Shows</title>
   <script defer src="index.bundle.js"></script></head>
   <body>
-    <div class="container">
-      <h1>TV Shows List</h1>
-      <div id="shows-list" class="shows-list"></div>
-      <div id="shows-comment" class="shows-comment">
-        <div class="container-comment">
-          <div class="image-container">
-            <img
-              class="comment-image"
-              src="https://static.tvmaze.com/uploads/images/medium_portrait/6/16463.jpg"
-            />
-          </div>
-          <div class="shows-detail">
-            <h2>Beware the Batman</h2>
-            <div class="detail">
-              <span><strong>type:</strong> Animation</span>
-              <span><strong>ended:</strong> "1998-12-24"</span>
-              <span><strong>language:</strong> Japanese</span>
-              <div>
-                <strong>summary:</strong>
-                <p>
-                  Meet Bolt Crank, mercenary extraordinaire, and the man who
-                  eats metal! Through his travels, he stops along the way to
-                  make a few bucks and occasionally rescue damsels in distress.
-                  His taste for metal gives him quite an edge as he becomes
-                  capable of generating an assortment of weapons from his hand!
-                  It's a strange ability, but it seems to come in handy, so to
-                  speak. Bolt has an edge over his adversaries, but will that be
-                  enough?
-                </p>
-              </div>
+    <header class="header">
+      <div class="container">
+        <nav class="navigation">
+          <div class="logo"><a href="#">TV Shows</a></div>
+          <ul class="nav-list">
+            <li class="nav-item"><a href="#Home">Home</a></li>
+            <li class="nav-item"><a href="#about">about</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <h1>TV Shows List</h1>
+        <div id="shows-list" class="shows-list"></div>
+        <div id="shows-comment" class="shows-comment">
+          <div class="container-comment">
+            <div class="show-detail"></div>
+
+            <div id="box-comment" class="box-comment">
+              <h3 class="numberCommet">comment</h3>
+              <ul class="listComment"></ul>
             </div>
+
+            <form class="form">
+              <h3>Add a comment</h3>
+              <input
+                type="text"
+                class="nameInput"
+                required
+                placeholder="Add your Name"
+              />
+              <textarea
+                class="commentInput"
+                cols="30"
+                rows="10"
+                placeholder="Your insights"
+                required
+              ></textarea>
+
+              <button class="btn submit">Comment</button>
+            </form>
+
+            <button class="btn close-btn">✕</button>
           </div>
-
-          <div id="list-comment" class="list-comment">
-            <h3>comment</h3>
-            <ul>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit amet.</li>
-              <li>Lorem, ipsum.</li>
-            </ul>
-          </div>
-
-          <form class="form">
-            <h3>Add a comment</h3>
-            <input
-              type="text"
-              class="name-comment"
-              required
-              placeholder="Add your Name"
-            />
-            <textarea
-              class="insights-comment"
-              cols="30"
-              rows="10"
-              placeholder="Your insights"
-              required
-            ></textarea>
-
-            <button class="btn submit">Comment</button>
-          </form>
-
-          <button class="btn close-btn">✕</button>
         </div>
       </div>
-    </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <p>
+          created by EL mehdi Ahmidou & Javier Jesus Martínez Fariñas under CC
+          license
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

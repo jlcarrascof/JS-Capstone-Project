@@ -41,11 +41,8 @@ const displayComments = async (commentId) => {
 
 const displayCounterOfComments = () => {
   const numberCommet = document.querySelector('.numberCommet');
-  // Wait a bit to allow comments to be displayed
-  setTimeout(() => {
-    const commentCounter = countComments();
-    numberCommet.innerHTML = `comments (${commentCounter})`;
-  }, 500);
+  const commentCounter = countComments();
+  numberCommet.innerHTML = `comments (${commentCounter})`;
 };
 
 const clearField = (nameInput, commentInput) => {

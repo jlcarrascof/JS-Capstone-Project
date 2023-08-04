@@ -2,48 +2,50 @@ import {
   displayDetailCard, displayComments, displayCounterOfComments, clearField,
 } from './displayDetailCard.js';
 import { createComment } from './commentsApi.js';
+import { createLike, getItemLikes } from './likeApi.js';
 
-const initializeEventHandlers = (showsData) => {
-  const btnComment = document.querySelectorAll('.btn-comment');
-  const closeBtn = document.querySelector('.close-btn');
-  const addComment = document.querySelector('.form');
-  const nameInput = document.querySelector('.nameInput');
-  const commentInput = document.querySelector('.commentInput');
-  let commentId;
+const initializeEventHandlers = (item) => {
+  const { showCard, itemId, itemData } = item;
 
-  // display Detail Card
-  btnComment.forEach((btn) => btn.addEventListener('click', async () => {
-    commentId = +btn.parentElement.dataset.id;
-    const showDetail = showsData.filter((el) => el.id === commentId);
-
-    // display Detail Card
-    displayDetailCard(...showDetail);
-
-    // display comment
-    displayComments(commentId);
-
-    // display Counter Of Comments
-    displayCounterOfComments();
-  }));
-
-  // add new Comment
-  addComment.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
-    // create Comment
-    await createComment(commentId, nameInput.value, commentInput.value);
-
-    // display comment
-    displayComments(commentId);
-
-    // display Counter Of Comments
-    displayCounterOfComments();
-
-    // clear Field
-    clearField(nameInput, commentInput);
+  const likeButton = showCard.querySelector('.btn-like');
+  likeButton.addEventListener('click', async () => {
+    try {
+      await createLike(itemId);
+      const likes = await getItemLikes(itemId);
+      const numOfLike = likes.find((like) => like.item_id === itemId);
+      const counterLike = showCard.querySelector('.counter-like');
+      counterLike.textContent = numOfLike ? numOfLike.likes : 0;
+    } catch (error) {
+      throw new Error(`Error fetching data: ${error}`);
+    }
   });
 
-  // Close Detail Card
+  const commentButton = showCard.querySelector('.btn-comment');
+  commentButton.addEventListener('click', async () => {
+    try {
+      await displayDetailCard(itemData);
+      await displayComments(itemId);
+      await displayCounterOfComments();
+
+      const addComment = document.querySelector('.form');
+      const nameInput = document.querySelector('.nameInput');
+      const commentInput = document.querySelector('.commentInput');
+
+      addComment.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        await createComment(itemId, nameInput.value, commentInput.value);
+        await displayComments(itemId);
+        await displayCounterOfComments();
+
+        clearField(nameInput, commentInput);
+      });
+    } catch (error) {
+      throw new Error(`Error fetching data: ${error}`);
+    }
+  });
+
+  const closeBtn = document.querySelector('.close-btn');
   closeBtn.addEventListener('click', () => {
     document.getElementById('shows-comment').style.display = 'none';
   });

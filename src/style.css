@@ -232,3 +232,26 @@ h1 {
   background-color: var(--color-grey-dark-2);
   color: var(--color-grey-light-1);
 }
+
+/* //////// Style Box of Like ///////// */
+.box-like {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+}
+
+.btn-like {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-like span {
+  font-size: 2.5rem;
+}
+
+.counter-like {
+  font-size: 2.2rem;
+  font-weight: bolder;
+}

@@ -1,27 +1,8 @@
 const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 const appId = '8ge52RZ4xe8gKMYNyxDN';
 
-// Function to create a new app
-/* async function createApp() {
-  const url = `${baseUrl}apps/`;
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-    });
-    if (response.ok) {
-      const data = await response.text(); // Get the response as text
-      appId = data.trim(); // Trim whitespace from the response
-      console.log('App created. App ID:', appId);
-    } else {
-      console.error('Failed to create app:', response.status, response.statusText);
-    }
-  } catch (error) {
-    console.error('Error creating app:', error);
-  }
-} */
-
 // Function to create a new comment for an item
-export async function createComment(itemId, username, comment) {
+const createComment = async (itemId, username, comment) => {
   const url = `${baseUrl}apps/${appId}/comments`;
   const data = {
     item_id: itemId,
@@ -40,10 +21,10 @@ export async function createComment(itemId, username, comment) {
   } catch (error) {
     return false;
   }
-}
+};
 
 // Function to get comments for a specific item
-export async function getItemComments(itemId) {
+const getItemComments = async (itemId) => {
   const url = `${baseUrl}apps/${appId}/comments?item_id=${itemId}`;
   try {
     const response = await fetch(url);
@@ -55,4 +36,6 @@ export async function getItemComments(itemId) {
   } catch (error) {
     return [];
   }
-}
+};
+
+export { createComment, getItemComments };

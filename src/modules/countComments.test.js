@@ -15,9 +15,6 @@ describe('countComments function', () => {
       document.createElement('li'),
     ];
 
-    /* (mockReturnValue) method to specify what
-     the mocked function should return when called.
-    */
     document.querySelectorAll.mockReturnValue(mockCommentElements);
 
     const result = countComments();

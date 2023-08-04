@@ -2,7 +2,7 @@ const baseUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstone
 const appId = 'g5tsgrRdaxLZ6ykMVZ2Z';
 
 // Function to create a new like for an item
-export async function createLike(itemId) {
+const createLike = async (itemId) => {
   const url = `${baseUrl}apps/${appId}/likes`;
   const data = {
     item_id: itemId,
@@ -19,10 +19,10 @@ export async function createLike(itemId) {
   } catch (error) {
     return false;
   }
-}
+};
 
 // Function to get likes for a specific item
-export async function getItemLikes(itemId) {
+const getItemLikes = async (itemId) => {
   const url = `${baseUrl}apps/${appId}/likes`;
   const params = new URLSearchParams({ item_id: itemId });
   try {
@@ -35,4 +35,6 @@ export async function getItemLikes(itemId) {
   } catch (error) {
     return [];
   }
-}
+};
+
+export { createLike, getItemLikes };

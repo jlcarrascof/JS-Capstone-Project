@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --open",
     "build": "webpack",
-    "test": "jest --config=jest.config.js"
+    "test": "jest --config=jest.config.js",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/jlcarrascof/JS-Capstone-Project/issues"
   },
-  "homepage": "https://github.com/jlcarrascof/JS-Capstone-Project#readme",
+  "homepage": "https://jlcarrascof.github.io/JS-Capstone-Project",
   "devDependencies": {
     "@babel/preset-env": "^7.22.9",
     "babel-eslint": "^10.1.0",
@@ -40,5 +41,8 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "gh-pages": "^5.0.0"
   }
 }

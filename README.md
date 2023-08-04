@@ -29,7 +29,15 @@ The JavaScript capstone project is about building your own web application based
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
+## Video link
+Video link [here](https://drive.google.com/file/d/1wJ54VYcN0E0tRWjSd_g3DwBIwMeH_8Ky/view)
+
 ## 🛠 Built With <a name="built-with"></a>
+
+- HTML
+- CSS
+- Javascript
+- Webpack
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -55,7 +63,7 @@ In this video you can find more information about this project.
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link] Here will go the demo link when all the project is finished.
+- [Live Demo Link](https://jlcarrascof.github.io/JS-Capstone-Project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
